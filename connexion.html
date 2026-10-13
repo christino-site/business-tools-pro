@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connexion — Business Tools</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="auth-body">
+  <main class="auth-card">
+    <a class="brand" href="index.html"><span class="brand-mark">BT</span> Business Tools</a>
+    <h1>Connexion</h1>
+    <p class="lead">Retrouvez vos outils et vos données enregistrées.</p>
+
+    <form id="auth-form" data-mode="login" novalidate>
+      <div id="msg" class="msg" role="alert" aria-live="polite"></div>
+
+      <div class="field">
+        <label for="email">Adresse email</label>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="vous@exemple.com">
+      </div>
+
+      <div class="field">
+        <label for="password">Mot de passe</label>
+        <div class="input-row">
+          <input id="password" name="password" type="password" autocomplete="current-password" required minlength="8">
+          <button type="button" class="pw-toggle" data-toggle-pw="password" aria-pressed="false">Afficher</button>
+        </div>
+      </div>
+
+      <button id="submit" class="btn btn-primary" type="submit">Se connecter</button>
+    </form>
+
+    <p class="alt">Pas encore de compte ? <a href="inscription.html">Créer un compte</a></p>
+    <a class="back" href="index.html">← Retour au site</a>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="auth.js"></script>
+  <script src="auth-forms.js"></script>
+</body>
+</html>

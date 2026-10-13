@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Créer un compte — Business Tools</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="auth-body">
+  <main class="auth-card">
+    <a class="brand" href="index.html"><span class="brand-mark">BT</span> Business Tools</a>
+    <h1>Créer un compte</h1>
+    <p class="lead">Enregistrez vos factures, calculs et messages. Vous seul y avez accès.</p>
+
+    <form id="auth-form" data-mode="signup" novalidate>
+      <div id="msg" class="msg" role="alert" aria-live="polite"></div>
+
+      <div class="field">
+        <label for="name">Nom complet</label>
+        <input id="name" name="name" type="text" autocomplete="name" required placeholder="Ex. Christino">
+      </div>
+
+      <div class="field">
+        <label for="email">Adresse email</label>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required placeholder="vous@exemple.com">
+      </div>
+
+      <div class="field">
+        <label for="password">Mot de passe</label>
+        <div class="input-row">
+          <input id="password" name="password" type="password" autocomplete="new-password" required minlength="8">
+          <button type="button" class="pw-toggle" data-toggle-pw="password" aria-pressed="false">Afficher</button>
+        </div>
+        <span class="hint">8 caractères minimum.</span>
+      </div>
+
+      <div class="field">
+        <label for="password2">Confirmer le mot de passe</label>
+        <div class="input-row">
+          <input id="password2" name="password2" type="password" autocomplete="new-password" required minlength="8">
+          <button type="button" class="pw-toggle" data-toggle-pw="password2" aria-pressed="false">Afficher</button>
+        </div>
+      </div>
+
+      <button id="submit" class="btn btn-primary" type="submit">Créer mon compte</button>
+    </form>
+
+    <p class="alt">Déjà un compte ? <a href="connexion.html">Se connecter</a></p>
+    <a class="back" href="index.html">← Retour au site</a>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="auth.js"></script>
+  <script src="auth-forms.js"></script>
+</body>
+</html>
